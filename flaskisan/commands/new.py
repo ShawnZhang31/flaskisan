@@ -36,7 +36,7 @@ def new(name, version):
     repos = git.Repo.clone_from(url=flaskisan_repos, to_path=name)
     tags = sorted(repos.tags, key=lambda t: t.commit.committed_datetime)
     tag = None
-    if version not None:
+    if version:
         for item in tags:
             if version == item.name:
                 tag = item

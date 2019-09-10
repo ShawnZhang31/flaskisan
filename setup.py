@@ -12,7 +12,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name = 'flaskisan',
-    version = '0.0.1',
+    version = '0.0.2',
     author = 'Shawn Zhang',
     author_email = 'shawnzhang31@gmail.com',
     description = 'A mini flask skeleton framworks little like laravel',

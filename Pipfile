@@ -9,6 +9,7 @@ verify_ssl = true
 click = "*"
 pytest = "*"
 gitpython = "*"
+twine = "*"
 
 [requires]
 python_version = "3.6"

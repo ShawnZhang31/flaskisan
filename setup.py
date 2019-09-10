@@ -12,7 +12,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name = 'flaskisan',
-    version = '0.0.2',
+    version = '0.0.3',
     author = 'Shawn Zhang',
     author_email = 'shawnzhang31@gmail.com',
     description = 'A mini flask skeleton framworks little like laravel',
@@ -24,6 +24,10 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+    ],
+    install_requires=[
+        "gitpython>=3.0.2",
+        "click>=5.1",
     ],
     python_requires='>=3.0',
 )

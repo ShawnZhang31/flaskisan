@@ -3,7 +3,7 @@
  * @Author: Shawn Zhang 
  * @Date: 2019-09-09 00:53:46 
  * @Last Modified by: Shawn Zhang
- * @Last Modified time: 2019-09-09 11:07:41
+ * @Last Modified time: 2019-09-22 17:21:01
  */
 '''
 from __future__ import absolute_import, print_function
@@ -15,13 +15,14 @@ from git.exc import GitCommandError
 import shutil
 
 from flaskisan import exceptions
+from flaskisan.cli import pass_environment
 
 flaskisan_repos = 'git@github.com:ShawnZhang31/flask-artisan.git'
 
-@click.command()
-@click.option('--name', default=None, help='工程名称')
-@click.option('--v', default=None, help='flaskisan的版本')
-def new(name, version):
+@click.command('new', short_help='初始化一个flaskisan工程')
+@click.option('-n','--name', default=None, help='工程名称')
+@click.option('-v','--version', default=None, help='flaskisan的版本')
+def cli(name, version):
     """创建flask工程
     参数：
         name:要创建的flaskisan工程的名称

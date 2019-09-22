@@ -3,7 +3,7 @@
  * @Author: Shawn Zhang 
  * @Date: 2019-09-09 00:24:12 
  * @Last Modified by: Shawn Zhang
- * @Last Modified time: 2019-09-09 00:26:11
+ * @Last Modified time: 2019-09-22 17:22:19
  */
 '''
 import setuptools
@@ -12,7 +12,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name = 'flaskisan',
-    version = '0.0.3',
+    version = '1.0.0',
     author = 'Shawn Zhang',
     author_email = 'shawnzhang31@gmail.com',
     description = 'A mini flask skeleton framworks little like laravel',
@@ -30,4 +30,8 @@ setuptools.setup(
         "click>=5.1",
     ],
     python_requires='>=3.0',
+    entry_points='''
+        [console_scripts]
+        flaskisan=flaskisan.cli:cli
+    ''',
 )
